@@ -1,0 +1,150 @@
+
+
+<html>
+
+    <head>
+        <style>
+            body {
+                background-image: url("hello.jpg.webp");
+                background-repeat: no-repeat;
+                background-size: 140%;
+            }
+    
+            #display {
+                width: 9cm;
+                height: 2cm;
+            }
+    
+            input {
+                border-radius: 21px;
+                border: 5px solid #244624;
+                font-size: 34px;
+                height: 65px;
+                width: 80px;
+            }
+    
+            button {
+                border-radius: 20px;
+                font-size: 40px;
+                background: #978fa0;
+                width: 102px;
+                height: 90px;
+                margin: 6px;
+            }
+    
+    
+            .calculator {
+                border: 4px solid #13695d;
+                padding: 23px;
+                border-radius: 53px;
+                display: inline-block;
+                width: 320px;
+            }
+    
+            .title {
+                margin-bottom: 10px;
+                padding: 5px 0;
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
+                color: red;
+                font-family: 'Cookie', cursive;
+            }
+    
+            .output {
+                margin-bottom: 100px;
+                padding: 50px;
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
+                color: yellow;
+                font-family: 'Cookie', cursive;
+            }
+        </style>
+        <script>
+            function abc(x) {
+                document.getElementById("display").value += x;
+            }
+            function solve() {
+                var x = document.getElementById("display").value;
+                var y = eval(x);
+                document.getElementById("display").value = y;
+            }
+            function clr() {
+                document.getElementById("display").value = "";
+            }
+            function sbs() {
+                var x = document.getElementById("display").value;
+                var l = x.length;
+                document.getElementById("display").value = x.substring(0, l - 1);
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div class="Title" align="centre">
+            <h2 style="font-family:cursive ; text-align:center">
+                Calculator
+            </h2>
+        </div>
+    
+        <table border="2" align="center" cellpadding="13" cellspacing="10" bgcolor="#6D7B8D"
+            style="border-radius:30px 30px 30px 30px;">
+    
+            <form name="calculator">
+                <tr>
+                    <td colspan="4" class="output" align="center">
+                        <input class="calculator" type="textfield" name="ans" value="" id=display>
+                    </td>
+                </tr>
+    
+                <div class="keys">
+                    <tr>
+    
+                        <td colspan="2" align="center"><input style="width: 5cm;" type="button" value="C" onclick="clr()">
+                        </td>
+                        <td colspan="2" align="center"><input style="width: 5cm;" type="button" value="=" onclick="solve()">
+                        </td>
+    
+    
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="7" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="8" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="9" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="*" onclick="abc(this.value)"></td>
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="4" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="5" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="6" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="-" onclick="abc(this.value)"></td>
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="1" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="2" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="3" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="+" onclick="abc(this.value)"></td>
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="0" onclick="abc(this.value)"></td>
+                        <td><input type="button" value="." onclick="abc(this.value)"></td>
+    
+    
+                        <td><input type="button" value=“&larr;” onclick="sbs()"></td>
+                        <td><input type="button" value="/" onclick="abc(this.value)"></td>
+                    </tr>
+        </table>
+        </div>
+    </body>
+    
+    </html>
+    
+    
+    
+    
+    
