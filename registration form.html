@@ -1,0 +1,137 @@
+
+<html>
+    <head>
+      <title>
+        <b>Registration page</b>
+      </title>
+      <script>
+      function validate()
+      {
+        var x = document.getElementById("Number").value;
+        var y = document.getElementById("pass").value;
+        var z = document.getElementById("cpass").value;
+        if (x.length != 10)
+        {
+          alert("Invalid Mobile Number");
+          return false;
+        }
+        else if (y != z)
+        {
+        alert("password not correct") ;
+        return false ;
+        }
+        else return true;
+    
+      }
+      </script>
+    </head>
+    <body bgcolor="yellow">
+      <center>
+      <h1 align=center><b><i> Registration Form</i><b></h1>
+      <p> Fill this registration form to continue </p>
+    </center>
+      <br>
+      <table align="center">
+        <table border="10%" align=center>
+        <form onsubmit = validate()>
+          <tr>
+            <td>
+              <label for="name"><b> User Name</b> </label>
+            </td>
+            <td>
+              <input type="text" id="name" placeholder="User Name" required >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password"><b> Password</b> </label>
+            </td>
+            <td>
+              <input type="password" id="pass" name="pass" placeholder="Password" required >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cpassword"><b> Confirm Password</b> </label>
+            </td>
+            <td>
+              <input type="password" id="cpass" name="cpass" placeholder="Confirm Password" required >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="gender"><b> Gender</b> </label>
+            </td>
+            
+            <td>
+              <input type="radio"  name="gender" value="Male" required/>
+              <label for="Male">Male</label>
+              <input type="radio"  name="gender" value="Female" required/>
+              <label for="Female">Female</label>
+              <input type="radio"  name="gender" value="other" required/>
+              <label for="other">other</label>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Hobbies</b></td>
+            
+            <td><input type="checkbox" name="hobbies" value="Playing" >Playing<br>
+            <input type="checkbox" name="hobbies" value="Reading" >Reading</td>
+            
+        </tr>
+          <tr>
+            <td>
+              <label for="qualification"><b> Highest Qualification</b> </label>
+            </td>
+            <td>
+              <select name="qualification">
+              <option value="P.hd"> P.hd </option>
+              <option value="Post Graduate"> Post Graduate </option>
+              <option value="Graduate"> Graduate </option>
+              <option value="12th pass"> 12th pass </option>
+              <option value="10th pass"> 10th pass </option>
+              <option value="10th fail"> 10th fail </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Enter Date of birth</b></td>
+            <td><input type="date" value="dob" required></td>
+        </tr> 
+          <tr>
+            <td>
+              <label for="e-mail"><b> e-mail</b> </label>
+            </td>
+            <td>
+              <input type="email" id="e-mail" placeholder="e-mail address">
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              <label for="number"><b> Mobile Number</b> </label>
+            </td>
+            <td>
+              <input type="number" id="Number" placeholder="Number" required >
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              <label for="Address"><b> Address </b></label>
+            </td>
+            
+             <td> <textarea cols="80" row="5" value="Address" placeholder="Address"required >
+              </textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><b>About Yourself</b></td>
+            <td><textarea name="t1" placeholder="enter about yourself" required></textarea></td>
+        </tr> 
+          <tr>
+            <td colspan="2">
+              <center><input type="submit" name="submitbtn" value="Apply Now" /></center>
+            </td>
+          </tr>
+    
